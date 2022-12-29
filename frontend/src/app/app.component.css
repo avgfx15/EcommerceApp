@@ -1,0 +1,19 @@
+.page {
+  height: 100vh;
+}
+.contentBox {
+  margin-top: 0;
+  margin-bottom: 20rem;
+}
+.footer {
+  margin-top: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background: rgb(61, 61, 61);
+  height: 5rem;
+  font-size: 1.2rem;
+  line-height: 5rem;
+}

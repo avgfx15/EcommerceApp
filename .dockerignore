@@ -1,0 +1,11 @@
+node_modules
+
+npm-debug.log
+
+productData.txt
+
+# .env
+
+.gitignore
+
+# dist
