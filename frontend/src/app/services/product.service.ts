@@ -2,6 +2,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ProductModel } from '../model/product';
+import { Cart } from '../model/cart';
 
 @Injectable({
   providedIn: 'root',
@@ -120,5 +121,10 @@ export class ProductService {
       /// Update header by emit
       this.cartDataAvailable.emit(cartProducts);
     }
+  }
+  //` Add to cart function
+
+  addToCart(cartData: Cart) {
+    return this.httpClient.post(`http://localhost:4700/cart`, cartData);
   }
 }

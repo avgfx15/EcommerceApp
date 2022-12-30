@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Cart } from '../model/cart';
 import { ProductModel } from '../model/product';
 import { ProductService } from '../services/product.service';
 
@@ -81,8 +82,20 @@ export class ProductDetailsComponent implements OnInit {
         let userId = user && JSON.parse(user)._id;
 
         /// cartData with products and UserId
-        let cartData = { ...this.productData, userId: userId };
-        console.log(cartData);
+        let cartData: Cart = {
+          ...this.productData,
+          userId: userId,
+          productId: this.productData._id,
+        };
+
+        delete cartData._id;
+        this.productServices.addToCart(cartData).subscribe((res) => {
+          this.resData = res;
+
+          if (this.resData) {
+            console.log(this.resData);
+          }
+        });
       }
     }
   }
