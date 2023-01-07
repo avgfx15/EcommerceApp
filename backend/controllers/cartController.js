@@ -26,10 +26,9 @@ exports.addToCart = async (req, res) => {
       cartProductPrice: cartQty * product.productPrice,
     };
 
-    console.log(cart.products[0]);
-    cart.products.push(newCart);
+    // cart.products.push(newCart);
 
-    await cart.save();
+    await cart.save(newCart);
     console.log(cart);
     return res.status(200).json({
       message: "Add to cart",
