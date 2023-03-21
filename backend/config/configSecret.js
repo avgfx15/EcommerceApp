@@ -1,4 +1,4 @@
 module.exports = {
   port: 4700,
-  dbUri: "mongodb://localhost:27017/Ecommerce",
+  dbUri: "mongodb+srv://avgfx15:avgfx2015@ecommerce.tvkg45b.mongodb.net/test",
 };
