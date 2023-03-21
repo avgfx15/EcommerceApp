@@ -3,11 +3,8 @@ pipeline {
   stages {
     stage("verify tooling") {
       steps {
-        sh '''
-          docker version
-          docker info
-          docker-compose version         
-        '''
+        sh 'sudo docker-compose build'
+        sh 'sudo docker-compose up -d'
       }
     }
   }
