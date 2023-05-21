@@ -1,9 +1,9 @@
 node{
 
-    stage('SCM Checkout')
-    {
-        git url: 'https://github.com/avgfx15/EcommerceApp.git'
-    }
+    // stage('SCM Checkout')
+    // {
+    //     git url: 'https://github.com/avgfx15/EcommerceApp.git'
+    // }
     
     stage('Run Docker Compose File')
     {
